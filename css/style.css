@@ -1,0 +1,227 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff8f5 0%, #fce1e8 100%);
+    color: #2b2b2b;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 4rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #e79ea4;
+  }
+  
+  a:hover {
+    color: #2b2b2b;
+  }
+  
+  header, footer {
+    background-color: #f7c5cc;
+    color: #2b2b2b;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  nav a {
+    font-weight: 600;
+    color: #2b2b2b;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #d88a95;
+  }
+  
+  main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1;
+  }
+  
+  section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+  }
+  
+  h1, h2, h3 {
+    color: #206a87;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  h2::after {
+    content: ' ✿';
+    color: #e79ea4;
+    font-size: 1.5rem;
+    margin-left: 0.3rem;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    animation: fadeInUp 1s ease-in-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Buttons */
+  .btn, button {
+    background-color: #e79ea4;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .btn:hover, button:hover {
+    background-color: #d88a95;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Projects */
+  /* .project {
+    background-color: #f1faee;
+    border-left: 6px solid #a8dadc;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+  } */
+  
+  /* Contact Form */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  input, textarea {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #2a9d8f;
+    box-shadow: 0 0 0 2px rgba(42, 157, 143, 0.2);
+  }
+  
+  /* Decorative background bubbles */
+  .bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(231, 158, 164, 0.1);
+    z-index: 0;
+  }
+  
+  .top-left {
+    width: 150px;
+    height: 150px;
+    top: -50px;
+    left: -50px;
+  }
+  
+  .bottom-right {
+    width: 200px;
+    height: 200px;
+    bottom: -60px;
+    right: -40px;
+  }
+  
+  footer {
+    font-size: 0.9rem;
+    color: #6f6f6f;
+    border-top: 1px solid #eee;
+    margin-top: 2rem;
+  }
+  
+  /* Font imports */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;500&display=swap');
+
+  body.dark-mode {
+    background: linear-gradient(135deg, #1e1e1e 0%, #2c2c2c 100%);
+    color: #fce1e8;
+  }
+  
+  body.dark-mode header,
+  body.dark-mode footer {
+    background-color: #2c2c2c;
+    color: #fce1e8;
+  }
+  
+  body.dark-mode main,
+  body.dark-mode section {
+    background-color: #333;
+    color: #fce1e8;
+  }
+  
+  body.dark-mode a {
+    color: #fbb1bf;
+  }
+  
+  body.dark-mode a:hover {
+    color: #ffffff;
+  }
+  
+  body.dark-mode .btn,
+  body.dark-mode button {
+    background-color: #fbb1bf;
+    color: #2c2c2c;
+  }
+  
+  body.dark-mode .btn:hover,
+  body.dark-mode button:hover {
+    background-color: #f984a1;
+  }
+  
+  body.dark-mode input,
+  body.dark-mode textarea {
+    background-color: #444;
+    color: #fce1e8;
+    border-color: #666;
+  }
+  
+  body.dark-mode input:focus,
+  body.dark-mode textarea:focus {
+    border-color: #fbb1bf;
+    box-shadow: 0 0 0 2px rgba(251, 177, 191, 0.3);
+  }
+  
